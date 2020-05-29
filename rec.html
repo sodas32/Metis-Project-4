@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>My Webpage</title>
+</head>
+
+<body>
+  <form action="/recommender">
+
+    <label for="fname">What are you looking for?:</label>
+    <input type="text" id="interest" name="interest"><br><br>
+
+    <input type="submit" value="Submit" method="get">
+
+
+
+  </form>
+
+  <p>
+    You might like these bars:
+    {% for p in prediction %}
+      <br>  {{p}} 
+    {% endfor %}
+  </p>
+
+</body>
+
+</html>
